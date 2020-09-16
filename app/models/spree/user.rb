@@ -5,7 +5,7 @@ module Spree
     include UserPaymentSource
 
     devise :database_authenticatable, :registerable, :recoverable,
-           :rememberable, :trackable, :encryptable, encryptor: 'bcrypt'
+           :rememberable, :trackable#, encryptor: 'bcrypt'
     devise :confirmable if Spree::Auth::Config[:confirmable]
     devise :validatable if Spree::Auth::Config[:validatable]
 
